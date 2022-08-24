@@ -1,0 +1,168 @@
+/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e5e5e5;
+  font-family: arial;
+  font-style: normal;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.products__header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.products__image {
+  width: 100%;
+}
+
+.products__additional {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px 0 0;
+}
+
+.products__new {
+  width: 110px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  background: #fdcff3;
+  border-radius: 8px;
+  margin: 16px 0 0 16px;
+}
+
+.products__last {
+  width: 134px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  background: #ffcf56;
+  border-radius: 8px;
+  margin: 16px 0 0 16px;
+}
+
+.products__main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.products__main li {
+  width: 31%;
+  min-height: 480px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 10px 7px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 24px 0;
+}
+
+.products__text {
+  padding: 0 24px 85px 24px;
+}
+
+.products__text p {
+  margin: 16px 0;
+}
+
+.products__button {
+  width: 90%;
+  min-height: 48px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+  margin: 16px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.products__button.products__button_default {
+  color: #42940f;
+  border: 2px #42940f solid;
+  border-radius: 8px;
+}
+
+.products__button.products__button_disabled {
+  pointer-events: none;
+  background: #4e4e4e;
+  border: 1px solid #4e4e4e;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.products__button.products__button_default:hover {
+  background: #42940f;
+  color: #ffffff;
+}
+
+.products__button.products__button_default:active {
+  background: #1f5200;
+  color: #ffffff;
+  border: 2px solid #1f5200;
+}
+
+@media (max-width: 800px) {
+  .products__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .products__main li {
+    width: 75%;
+  }
+}
+
+@media (max-width: 345px) {
+  .products__main li {
+    width: 95%;
+  }
+}
